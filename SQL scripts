@@ -1,0 +1,163 @@
+--Total Deaths Percentages over Total Cases in Bangladesh
+
+
+SELECT
+    country,
+    date,
+    total_cases,
+    total_deaths,
+    COALESCE(SAFE_DIVIDE(total_deaths, total_cases) * 100, 0) AS DeathPercentage
+From test1-383919.compact_1789039854647.compact
+WHERE country = 'Bangladesh'
+order by 1,2
+
+
+--Percentage of Population Infected in Bangladesh
+
+
+SELECT DISTINCT country
+FROM test1-383919.compact_1789039854647.compact
+ORDER BY country;
+SELECT
+    country,
+    date,
+    total_cases,
+    population,
+    (total_cases/population) * 100 AS PercentagePopulationInfected
+From test1-383919.compact_1789039854647.compact
+WHERE country = 'Bangladesh'
+order by 1,2
+
+
+-- Highst Infection and Infection Rates for Countries
+SELECT
+    country,
+    population,
+    MAX (total_cases) AS HighestInfectionCount,
+    MAX (total_cases/ population) * 100 AS HighestPercentPopulationInfected
+From test1-383919.compact_1789039854647.compact
+Group by country, population
+order by 1,2
+
+
+-- Highst Infection and Infection Rates for Countries in descending Order
+
+
+SELECT
+    country,
+    population,
+    MAX (total_cases) AS HighestInfectionCount,
+    MAX (total_cases/ population) * 100 AS HighestPercentPopulationInfected
+From test1-383919.compact_1789039854647.compact
+Group by country, population
+Order by HighestPercentPopulationInfected desc
+
+
+
+
+-- Highst Deaths Count for Countries in Descending Order
+
+
+SELECT
+    country,
+    MAX (total_deaths) AS HighestDeathCount,
+From test1-383919.compact_1789039854647.compact
+Where Continent is not null
+Group by country
+Order by HighestDeathCount desc
+
+
+-- New Vaccination Rates for Countries
+
+
+SELECT
+    country,
+    date,
+    new_vaccinations
+From test1-383919.compact_1789039854647.compact
+Where Continent is not null
+Order by 1,2
+
+
+-- Rolling Vaccination for Countries
+
+
+SELECT
+    country,
+    date,
+    new_vaccinations,
+    SUM (new_vaccinations) OVER (PARTITION by country Order by country, date) AS RollingPeopleVaccinations
+
+
+-- Using CTE for Percentage of Vaccinated for Countries
+
+
+From test1-383919.compact_1789039854647.compact
+Where Continent is not null
+Order by 1,2
+WITH VaccinationData AS (
+    SELECT
+        country,
+        date,
+        new_vaccinations,
+        population,
+        SUM(new_vaccinations) OVER (
+            PARTITION BY country
+            ORDER BY date
+        ) AS RollingPeopleVaccinations
+    FROM `test1-383919.compact_1789039854647.compact`
+    WHERE Continent IS NOT NULL
+)
+
+
+
+
+SELECT
+    country,
+    date,
+    new_vaccinations,
+    population,
+    RollingPeopleVaccinations,
+    (RollingPeopleVaccinations / population) * 100 AS PercentageVaccinated
+FROM VaccinationData
+ORDER BY 1, 2;
+
+
+--New Table
+
+
+CREATE TABLE `test1-383919.compact_1789039854647.vaccination_analysis` AS
+
+
+
+
+WITH VaccinationData AS (
+    SELECT
+        country,
+        date,
+        new_vaccinations,
+        population,
+        SUM(new_vaccinations) OVER (
+            PARTITION BY country
+            ORDER BY date
+        ) AS RollingPeopleVaccinations
+    FROM `test1-383919.compact_1789039854647.compact`
+    WHERE Continent IS NOT NULL
+)
+
+
+
+
+SELECT
+    country,
+    date,
+    new_vaccinations,
+    population,
+    RollingPeopleVaccinations,
+    SAFE_DIVIDE(RollingPeopleVaccinations, population) * 100
+        AS PercentageVaccinated
+FROM VaccinationData
+ORDER BY country, date;
+
+
+
