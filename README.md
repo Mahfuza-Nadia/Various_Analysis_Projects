@@ -8,4 +8,4 @@ Contains a **BigQuery SQL script** used to explore and analyze a COVID-19 datase
 
 ### 2. Bangladesh Protein Supply Trend Analysis
 
-Contains a **PDF report, Excel analysis file, and Python code** examining protein supply trends in Bangladesh from 2010–2023. The analysis groups protein sources into six major food groups—Fish, Meat, Milk, Eggs, Pulses, and Cereals and examines changes in protein supply, contribution shares, and the distribution between animal-source and plant-source foods.
+Contains a **PDF report, Excel analysis file, and Python code** examining protein supply trends in Bangladesh from 2010–2023. The analysis groups protein sources into six major food groups: Fish, Meat, Milk, Eggs, Pulses, and Cereals and examines changes in protein supply, contribution shares, and the distribution between animal-source and plant-source foods.
