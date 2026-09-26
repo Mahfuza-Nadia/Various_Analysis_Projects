@@ -62,4 +62,5 @@ The script cleans the data, creates the analysis variables, performs the statist
 
 * `GEM_Bangladesh.csv` — Raw World Bank data
 * `Bangladesh_Economic_Case_Study.R` — R analysis script
+* `Bangladesh_analysis_data.csv` — Processed dataset
 * `Exchange Rate Depreciation and Inflation in Bangladesh.pdf` — Report
