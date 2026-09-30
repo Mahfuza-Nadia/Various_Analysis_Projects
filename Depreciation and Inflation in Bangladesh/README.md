@@ -94,7 +94,7 @@ To explore the Power BI dashboard:
 * `Bangladesh_Economic_Case_Study.R` — R analysis script
 * `Bangladesh_analysis_data.csv` — Processed dataset
 * `Exchange Rate Depreciation and Inflation in Bangladesh.pdf` — Research report
-* `powerbi/Bangladesh_dashboard.pbix` — Interactive Power BI dashboard
+* `powerbi/Bangladesh_Depreciation and Inflation_dashboard.pbix` — Interactive Power BI dashboard
 * `powerbi/dashboard.png` — Dashboard screenshot
 
 ## Tools and Technologies
