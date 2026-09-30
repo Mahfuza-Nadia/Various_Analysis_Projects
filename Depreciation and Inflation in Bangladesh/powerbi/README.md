@@ -63,7 +63,6 @@ To interact with the report, download the PBIX file and open it using Microsoft 
 - Microsoft Power BI — Dashboard development and data visualization
 - R — Data cleaning and preparation
 - tidyverse — Data transformation
-- GitHub — Project hosting and documentation
 
 ## Purpose
 
@@ -71,6 +70,6 @@ This project demonstrates the application of data visualization techniques to an
 
 ## Author
 
-**Sadia Tabassum**
+Mahfuza Nadia
 
 Economics | Data Analysis | Data Visualization
