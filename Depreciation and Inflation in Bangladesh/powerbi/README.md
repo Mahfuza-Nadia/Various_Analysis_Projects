@@ -50,7 +50,7 @@ The scatter plot provides a visual representation of the association between exc
 ## Tools Used
 
 - Microsoft Power BI — Dashboard development and data visualization
-To interact with the report, download the PBIX file and open it using Microsoft Power BI Desktop. 
+- To interact with the report, download the PBIX file and open it using Microsoft Power BI Desktop. 
 
 ## Purpose
 
