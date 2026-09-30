@@ -7,10 +7,6 @@ This project presents an interactive Power BI dashboard exploring inflation and 
 
 The dashboard visualizes macroeconomic trends and examines the relationship between exchange-rate depreciation and inflation. It was developed using Microsoft Power BI, with data prepared and analyzed in R.
 
-## Dashboard Preview
-
-![Power BI Dashboard](powerbi/dashboard.png)
-
 ## Dashboard Features
 
 The dashboard includes the following visualizations:
@@ -53,23 +49,16 @@ The scatter plot provides a visual representation of the association between exc
 
 ## Files
 
-- **[Power BI Dashboard (.pbix)](powerbi/Bangladesh_dashboard.pbix):** Download the interactive Power BI report.
-- **[Dashboard Screenshot](powerbi/dashboard.png):** Preview of the completed dashboard.
+- **[Power BI Dashboard (.pbix)]
+- **[Dashboard Screenshot]
 
 To interact with the report, download the PBIX file and open it using Microsoft Power BI Desktop.
 
 ## Tools Used
 
 - Microsoft Power BI — Dashboard development and data visualization
-- R — Data cleaning and preparation
-- tidyverse — Data transformation
 
 ## Purpose
 
 This project demonstrates the application of data visualization techniques to an applied economics topic. It showcases the use of Power BI to communicate macroeconomic trends and explore relationships using monthly economic data.
 
-## Author
-
-Mahfuza Nadia
-
-Economics | Data Analysis | Data Visualization
