@@ -47,16 +47,10 @@ The visualizations allow users to explore changes in inflation and the exchange 
 
 The scatter plot provides a visual representation of the association between exchange-rate changes and inflation. These visual relationships are descriptive and do not establish causality.
 
-## Files
-
-- **[Power BI Dashboard (.pbix)]
-- **[Dashboard Screenshot]
-
-To interact with the report, download the PBIX file and open it using Microsoft Power BI Desktop.
-
 ## Tools Used
 
 - Microsoft Power BI — Dashboard development and data visualization
+To interact with the report, download the PBIX file and open it using Microsoft Power BI Desktop. 
 
 ## Purpose
 
