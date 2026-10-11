@@ -1,3 +1,5 @@
+![Dashboard](dashboard.png)
+
 # Exchange Rate Depreciation and Inflation in Bangladesh
 ### Interactive Power BI Dashboard | July 2006 – June 2026
 
